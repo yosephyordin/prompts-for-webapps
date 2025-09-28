@@ -1,0 +1,60 @@
+# Prompt: Futuristic Pomodoro Web App
+
+**Language:** English  
+**Use case:** Generate a single-page productivity web app with Pomodoro timer, task tracker, and music player.  
+
+---
+
+## Prompt Text
+
+You are an expert front-end developer. Build a single-page web application (HTML, CSS, and vanilla JavaScript only, no backend) with the following features and design requirements:
+
+---
+
+### Core Features
+1. **Pomodoro Timer**
+   - Default: 25 minutes work, 5 minutes break.  
+   - Adjustable session lengths.  
+   - Start, pause, reset controls.  
+   - Animated circular speedometer-style progress indicator (inspired by motorcycle speedometers, but futuristic and minimal).  
+
+2. **Task Tracker (To-Do List)**  
+   - Add, mark as complete, delete tasks.  
+   - Persist data in localStorage so tasks remain after page reload.  
+   - Clean task management UI.  
+
+3. **Focus Music Player**  
+   - Built-in playlist of royalty-free focus music playable directly in the browser (use accessible direct audio links or base64-embedded tracks so no upload is required).  
+   - Controls: play, pause, next track, volume.  
+   - Runs in the background while using the timer or tasks.  
+
+---
+
+### Design & UI Requirements
+- Color theme: dominated by a futuristic blue primary palette with gradients.  
+- Style: 3D neumorphism / glassmorphism hybrid (soft shadows, glowing highlights, futuristic depth).  
+- Main visual element: timer should look like a motorcycle speedometer, but sleek, digital, and sci-fi-inspired.  
+- Smooth transitions and hover effects.  
+- Futuristic typography and glowing UI highlights.  
+- Responsive layout: works perfectly on desktop, tablet, and mobile.  
+
+---
+
+### Technical Guidelines
+- Use only HTML, CSS, and vanilla JavaScript (no frameworks).  
+- Everything must be inside a single-page structure (`index.html` with embedded or linked CSS/JS).  
+- Code must be clean, modular, and well-commented.  
+- Store tasks and user preferences (last timer values, current track, volume) in localStorage.  
+- Ensure cross-browser compatibility.  
+- Animations must be GPU-friendly and smooth.  
+
+---
+
+### Deliverables
+- Provide the complete code in copy-paste-ready format.  
+- The app must be fully functional immediately in the browser (no extra setup).  
+- Do not skip any requested features: timer, futuristic speedometer-style UI, to-do list with localStorage, focus music player, responsive design, 3D effects.  
+
+---
+
+⚡ **With this prompt, generate a production-ready futuristic Pomodoro web app that feels like a blend of productivity tool and sci-fi dashboard.**
