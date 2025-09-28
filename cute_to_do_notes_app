@@ -1,0 +1,27 @@
+You are an expert front-end developer. Create a single-page web application (HTML, CSS, and vanilla JavaScript only, no backend) with the following requirements:
+Core Features
+1. 3D To-Do List
+    ◦ Tasks displayed in a cute, playful, 3D card style.
+    ◦ Support drag-and-drop to reorder tasks.
+    ◦ Add, mark as complete, and delete tasks.
+    ◦ Save tasks in localStorage so they persist after reload.
+2. Special Animation on Completion
+    ◦ When a task is checked as completed, trigger a fun “BOOM” style animation with a popping effect.
+    ◦ Show a celebratory floating message “CONGRATS” that appears briefly with a playful burst animation.
+Design & UI Requirements
+• Dominant color theme: soft and cute pink tones with pastel accents.
+• Style: playful 3D/neumorphism-inspired elements (soft shadows, rounded shapes, bouncy effects).
+• Cute micro-interactions (hover, press, drag).
+• Smooth, whimsical animations (CSS transitions, keyframes, or JS-based).
+• Responsive layout: works perfectly on desktop, tablet, and mobile.
+Technical Guidelines
+• Use only HTML, CSS, and vanilla JavaScript.
+• Keep everything inside a single-page structure (index.html + optional separate CSS/JS).
+• Code must be clean, modular, and well-commented.
+• Animations should be smooth and lightweight.
+• Ensure drag-and-drop functionality works across major browsers.
+Deliverables
+• Provide the complete, copy-paste ready code.
+• The app must run immediately in the browser without additional setup.
+• Do not skip features: 3D cute to-do list, drag-and-drop, localStorage, celebratory animation with “CONGRATS”, responsive design, pink pastel theme.
+⚡ With this prompt, generate a fun, cute, and playful 3D To-Do List web app that feels delightful, interactive, and futuristic-cute, while remaining fully functional and responsive.
