@@ -1,0 +1,38 @@
+You are an expert front-end developer and creative UI/UX designer. Build a single-page web application (HTML, CSS, and vanilla JavaScript only, no backend) for a Typing Speed Test game with full interactivity, gamification, and animations.
+Core Features
+1. Test Modes
+    ◦ 30 seconds mode
+    ◦ 60 seconds mode
+    ◦ Fixed word count mode (e.g., 50 or 100 words)
+2. Scoring System
+    ◦ Calculate and display WPM (Words Per Minute)
+    ◦ Accuracy percentage
+    ◦ Total mistakes / errors
+3. Interactive Typing Experience
+    ◦ Highlight characters/words as the user types (green for correct, red for wrong).
+    ◦ Smooth animations when marking correct/incorrect input.
+    ◦ A glowing animated 3D keyboard illustration that lights up as the user types (keys highlight dynamically).
+4. Gamification Elements
+    ◦ Motivational text or animations while typing (e.g., “Keep Going!”, “Awesome!”, “Speed Up!”).
+    ◦ Fun completion animations at the end of each test.
+    ◦ Option to restart/reset the test with a single button.
+5. Persistence & Settings
+    ◦ Save best scores locally using localStorage.
+    ◦ Include a Dark Mode toggle (light vs dark theme).
+    ◦ Responsive design for desktop, tablet, and mobile.
+Design & UI Requirements
+• Color palette: a soft, eye-friendly combination (not harsh, easy on the eyes for long focus).
+• Style: playful but modern, with 3D UI elements and glowing highlights.
+• Smooth transitions and animations for interactions.
+• Gamified look and feel — the app should feel like a fun challenge, not just a plain test.
+Technical Guidelines
+• Use only HTML, CSS, and vanilla JavaScript.
+• Keep everything in a single-page structure (index.html with CSS & JS).
+• Code must be clean, modular, and well-commented.
+• Ensure smooth animations with CSS transitions or JS.
+• No external backend required — fully functional in the browser.
+Deliverables
+• Provide the complete, copy-paste ready code.
+• The app must be fully functional immediately in the browser.
+• Do not skip features: test modes, WPM & accuracy tracking, animated 3D keyboard, gamification, restart button, localStorage for scores, dark mode toggle, responsive design.
+⚡ With this prompt, generate a fun, animated, 3D Typing Speed Test web app that feels gamified, motivating, and visually delightful — not just a test, but an experience.
