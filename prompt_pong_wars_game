@@ -1,0 +1,15 @@
+Create a simple web-based single-page game inspired by "Pong Wars" with a relaxing twist. Use only HTML, CSS, and JavaScript (you can use a lightweight JS game/animation framework like p5.js, Phaser, or Three.js). Keep all code in a single project.
+Game description:
+* The screen is divided into two sides: left (player) and right (enemy). Each side has a grid of colored blocks (blue for player, red for enemy).
+* Multiple colored ping pong balls automatically bounce around the arena. When a ball hits a block, it slowly damages and destroys the block.
+* Balls from the enemy side also attack the player’s blocks. The battle plays out automatically with no controls needed.
+* Visual style should be minimal but colorful, with smooth animations.
+* Sound: add built-in relaxing background music (chill/lo-fi style) and soft ping/pong sound effects when balls bounce or hit blocks.
+Extra features:
+* Blocks crack or fade before breaking for visual feedback.
+* Optionally add simple upgrades: faster ball speed, split balls, or stronger blocks.
+* The vibe should be relaxing and fun to watch, not stressful.
+Technical requirements:
+* Responsive design, playable on desktop and mobile browsers.
+* Smooth GPU-friendly animations.
+* No backend needed, everything runs client-side.
