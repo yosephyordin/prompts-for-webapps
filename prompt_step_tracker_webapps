@@ -1,0 +1,29 @@
+Build a complete responsive web application using React.js and Three.js.  
+
+Requirements:  
+1. Frameworks and tools:  
+   - React.js as the main framework.  
+   - Three.js for 3D/4D interactive visual effects.  
+   - TailwindCSS or another modern CSS framework for styling.  
+   - Framer Motion for smooth animations.  
+
+2. Features:  
+   - Step counter functionality.  
+   - Gamification elements: levels, badges, or achievements when users reach certain milestones.  
+   - Interactive 3D effects (e.g., rotating 3D coins, glowing effects, confetti animations).  
+   - Device motion sensor support if available (to count steps).  
+   - Progress bar or circular progress visualization.  
+   - Save progress in localStorage.  
+   - Reset button.  
+   - Optional leaderboard with mock data.  
+
+3. UI/UX guidelines:  
+   - Mobile-first responsive design, working well across all devices.  
+   - Fun, colorful UI with gradients, rounded cards, and modern layout.  
+   - Use animations, shadows, and transitions for a 4D experience.  
+   - Provide sound or vibration feedback if possible.  
+
+4. Output:  
+   - Provide the full React project structure with components, hooks, and styles.  
+   - Include integration of Three.js for interactive visuals.  
+   - Code should be clean, modular, and production-ready.
