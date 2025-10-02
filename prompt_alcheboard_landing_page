@@ -1,0 +1,64 @@
+Create a single-page, hyper-immersive landing page for "Alcheboard"—a premium board game store—using HTML, CSS, and JavaScript. The experience must feel "4D": not just visual, but spatially aware, contextually responsive, and emotionally engaging, as if the user has stepped into a living board game universe.
+
+🔮 Core 4D Experience Requirements:
+1. Hypercontextual Scroll-Driven 4D Dice:
+
+A 3D-rendered dice (using Three.js) must float persistently in the bottom-right corner of the viewport.
+While scrolling:
+The dice scales up (e.g., from 40px to 80px), becomes more detailed, and orbits slightly around the user’s scroll direction (e.g., tilts forward when scrolling down, backward when up).
+It emits subtle particle sparks (use lightweight canvas or Three.js particles) on rapid scroll.
+When scrolling stops:
+The dice smoothly minimizes back to a compact, idle state (e.g., gently rotating in place).
+Its opacity slightly reduces to avoid distraction.
+The dice must never obstruct content—use pointer-events: none and smart positioning.
+2. Immersive 4D Section Transitions (Hypercontextual):
+
+Each major section (Hero → Games → About → Testimonials → Contact) should feel like entering a new game realm.
+Use GSAP + ScrollTrigger + custom shaders or 3D transforms to create transitions that respond to scroll velocity and direction:
+Example: Scrolling from Hero to Games triggers a “board unfolding” effect—wooden panels slide open in 3D space, revealing game cards beneath.
+Scrolling into About triggers a “potion swirl” (alchemical theme): golden particles coalesce into text, with depth layers shifting like a diorama.
+Transitions must be context-aware: faster scroll = more dramatic effect; slow scroll = subtle, elegant reveal.
+3. Spatial Depth & Environmental Storytelling:
+
+Use multi-layer parallax (at least 3 depth layers: background, midground, foreground) to simulate a physical game table environment.
+Background: distant shelves with faint glowing game boxes.
+Midground: floating cards, tokens, or rulebooks that drift slowly.
+Foreground: interactive elements (buttons, dice, cards) with realistic shadows and depth.
+Ambient sound design (optional but encouraged): subtle dice rolls or parchment rustles on scroll (use Web Audio API with user-gesture activation).
+🧩 Page Structure & Content:
+1. Hero Section
+
+Headline: "Alcheboard: Where Strategy Meets Sorcery"
+Subtitle: "Curated board games that transform your table into a realm of adventure."
+CTA: "Begin Your Quest"
+Animated background: A 3D game board assembles in real-time (pieces slide in from edges using GSAP).
+2. Featured Games
+
+4 interactive game cards in a responsive grid.
+On scroll entry: cards rise from the “table surface” with staggered bounce.
+On hover: card flips to reveal gameplay details; emits a soft golden glow.
+3. About Alcheboard
+
+Narrative: "Forged in the spirit of alchemy, we blend timeless gameplay with modern design."
+Animated alchemical symbols pulse gently in the background (SVG + CSS keyframes).
+4. Testimonials
+
+Quotes appear as if written on parchment scrolls that unroll on scroll.
+5. Contact & Newsletter
+
+Email input with a “seal stamp” animation on submit.
+The 4D dice reacts to form interaction (e.g., rolls a “6” on successful submit).
+🎨 Design & Technical Specs:
+Color Palette: Antique gold, mahogany, forest green, parchment white, deep navy.
+Typography: Serif (e.g., Cinzel or Playfair Display) for headings; readable sans-serif (Inter) for body.
+Libraries:
+Three.js (for the 4D dice + optional 3D elements)
+GSAP + ScrollTrigger + Flip plugin (for scroll animations & transitions)
+Optional: lil-gui for debug, but remove in final build
+Performance:
+Dice animation must be GPU-accelerated.
+Use requestAnimationFrame for smooth scroll-follow logic.
+All assets optimized; lazy-load non-critical visuals.
+Responsive: Fully functional on mobile (dice scales down; transitions simplify but remain magical).
+🌌 Final Goal:
+The user should feel like they’re not browsing a website—but playing a living board game. Every scroll, click, and pause should trigger contextual, emotionally resonant feedback that deepens immersion. The 4D dice acts as a companion spirit, reacting to the user’s journey through the page. 
