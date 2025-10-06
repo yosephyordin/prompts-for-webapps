@@ -1,0 +1,53 @@
+I want you to create a complete code in a single HTML file (index.html) for a **Simple Kanban Board** that runs entirely on the client-side (frontend), without any backend, using only **HTML, CSS, and Vanilla JavaScript**.
+
+### 🔹 Core Requirements:
+- Store all data (columns, cards, order, etc.) in `localStorage`.
+- No server or external database.
+- Everything must be contained within a single `index.html` file.
+
+### 🔹 Core Features:
+1. **Fixed Columns**: At least 3 default columns: "To Do", "In Progress", "Done".
+2. **Task Cards**:
+   - Can be added within each column.
+   - Can be edited inline directly on the card.
+   - Can be deleted.
+   - Display the creation date (use `new Date()`).
+3. **Drag & Drop**:
+   - Cards can be dragged and dropped between columns.
+   - Use HTML5 Drag and Drop API or a manual implementation.
+4. **Automatic Saving**:
+   - Any changes (add, edit, delete, move) are saved instantly to `localStorage`.
+   - Data is restored from `localStorage` upon page reload.
+
+### 🔹 Additional Features (Must Be Included):
+1. **Luxurious Design**: Use a **black and gold** color scheme (like elegant gold), with a dark and sophisticated theme.
+2. **Entrance Animations**: Use subtle `fadeIn` or transition animations when cards and columns appear.
+3. **Responsive Design**: The layout must be clean and usable on smartphone screens (mobile-first or responsive).
+4. **Creation Date on Cards**: Displayed below the card content.
+5. **Inline Editing**: Cards can be edited directly without a separate form.
+6. **Reset Board Button**: To clear all data stored in `localStorage`.
+7. **Hover Effects**: Cards slightly lift and gain a stronger shadow on hover.
+8. **Delete Card**: Use a symbol (e.g., &times;) in the top-right corner of the card.
+
+### 🔹 Sample Data Structure in localStorage:
+{
+  "columns": {
+    "todo": { "id": "todo", "title": "To Do", "cardIds": ["card-1"] },
+    "progress": { "id": "progress", "title": "In Progress", "cardIds": [] },
+    "done": { "id": "done", "title": "Done", "cardIds": [] }
+  },
+  "cards": {
+    "card-1": { "id": "card-1", "content": "Example task", "date": "06/10/2025" }
+  },
+  "columnOrder": ["todo", "progress", "done"],
+  "nextCardId": 2
+}
+
+### 🔹 Style and User Experience:
+- Clean, elegant, and modern design.
+- Visually comfortable layout with appropriate contrast.
+- Responsive: Columns stack vertically on smaller screens.
+- Use CSS Flexbox or Grid for layout.
+- Subtle entrance animations for cards and columns on initial load.
+
+Please provide the **complete, functional, and ready-to-use** code. Ensure the layout remains visually appealing and fully functional when accessed on smartphones.
