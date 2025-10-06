@@ -1,0 +1,96 @@
+Create a single-page web application for tracking freelance project KPIs, built entirely with HTML, CSS, and vanilla JavaScript — no backend, no frameworks (e.g., no React or Vue), and no external build tools. The app must run directly from index.html in any modern browser.
+
+Core Requirements
+1. Project Input Form
+
+Allow users to add a new freelance project with these fields:
+
+Project name
+
+Client name (optional)
+
+Fee (in USD)
+
+Start date
+
+Deadline
+
+Status (dropdown: Not Started / In Progress / Completed / On Hold)
+
+Manual progress percentage (0–100%)
+
+(Optional but recommended: support task-based progress—users can add checklist items per project, and completed tasks auto-calculate overall progress.)
+
+2. Local Storage Persistence
+
+Save all project data to localStorage immediately after any change.
+
+Load saved projects on page load.
+
+Preserve task lists, progress, and metadata across sessions.
+
+3. Dashboard Overview
+
+Display a clean, responsive summary including:
+
+Total income earned this month
+
+Number of active projects (status ≠ Completed)
+
+List of projects with deadlines within the next 3 days (highlight overdue in red)
+
+Average progress across all projects
+
+Visual cards for each project showing name, client, fee, deadline, status, and a progress bar
+
+4. Data Visualization
+
+Use Chart.js via CDN (or pure CSS if simpler) to show monthly income trends.
+
+Show per-project progress using animated bars or subtle circular indicators.
+
+Use intuitive colors:
+
+Green for on-track
+
+Orange for at-risk
+
+Red for overdue
+
+5. Export & Reset
+
+Export as JSON: Button triggers a client-side download of all project data.
+
+Copy Summary: Button copies a human-readable summary (e.g., “Logo Design – 80% done, deadline Oct 12, fee $300”) to clipboard.
+
+Reset All Data: Button that clears all projects from localStorage and refreshes the UI.
+
+Do not show a confirmation modal or popup—just reset immediately.
+
+Design & UX Guidelines
+
+Fully responsive layout (mobile + desktop).
+
+Use a soft, natural color palette (e.g., muted blues, warm grays, pastel greens).
+
+Avoid black, gold, or “luxury” tones.
+
+Background: Use a small, subtle photo (e.g., a corner of a desk or coffee cup) that does not cover the full screen—keep it minimal and non-distracting.
+
+Smooth entrance animations (e.g., fade-in or slide-up) when cards or elements appear.
+
+Use system fonts (system-ui) for speed and readability.
+
+Do not use em dashes (—) anywhere in the UI text.
+
+Technical Constraints
+
+All code in three files: index.html, style.css, script.js.
+
+Use ES6+ JavaScript if needed, but keep it simple and compatible.
+
+No authentication, no APIs, no server calls—100% client-side.
+
+Code must be clean, readable, and ready to run by opening index.html.
+
+Deliver the complete, self-contained code that a user can save and run instantly in their browser.
