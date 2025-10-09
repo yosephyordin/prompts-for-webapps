@@ -59,11 +59,4 @@
     <noConfirmationForms>true</noConfirmationForms>
     <noBackendInteraction>true</noBackendInteraction>
   </outputRequirement>
-
-  <targetAudience>
-    <group>SaaS enthusiasts</group>
-    <group>beginner developers</group>
-    <group>AI lovers</group>
-    <region>United States</region>
-  </targetAudience>
 </webAppRequest>
