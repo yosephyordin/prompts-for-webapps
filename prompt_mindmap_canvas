@@ -1,0 +1,122 @@
+You are an expert full-stack developer and UI/UX designer.
+Build a single-page web app called Atlas Mind using React, HTML, and CSS only (no backend yet).
+
+GOAL:
+Create a next-generation Mind Mapping + Whiteboard hybrid tool that allows users to visualize ideas, connect nodes, draw freely, and attach evidence (sources, PDFs, links, etc.), all inside a single interactive canvas.
+
+CORE REQUIREMENTS:
+
+Use React for components and state management.
+
+Use HTML5 Canvas or SVG for drawing and node linking.
+
+Use pure CSS (or Tailwind if preferred) for styling.
+
+Everything should work inside one single page (index.html).
+
+Allow export as PNG or PDF of the current canvas view.
+
+MAIN FEATURES TO IMPLEMENT
+
+Infinite Smart Canvas
+
+A zoomable, draggable infinite canvas (like Miro or Figma whiteboard).
+
+Smooth panning and zooming interactions using mouse or trackpad.
+
+Nodes (Mind Map Elements)
+
+Users can create, drag, and connect nodes with lines or curves.
+
+Nodes should have editable titles and optional color tags.
+
+Clicking a node highlights its connections.
+
+Option to collapse or expand branches.
+
+Whiteboard / Free Draw Mode
+
+Toggle “Draw Mode” to freely sketch or annotate on the canvas.
+
+Support basic pen, eraser, color picker, and stroke thickness.
+
+Drawings should stay on the canvas and be included in export.
+
+Evidence Node System
+Each node can contain attached “Evidence” items:
+
+URL links (displayed as clickable)
+
+Image uploads (display thumbnail)
+
+PDF uploads (preview icon or filename)
+
+Short notes or quotes
+
+Optional embedded YouTube videos (if possible with thumbnail)
+
+Use a small icon on the node to open a popup showing these attachments.
+
+Hybrid Layout Modes
+
+Mind Map Mode → Auto-arrange nodes in a tree layout.
+
+Whiteboard Mode → Freely position nodes anywhere.
+
+Mixed Mode → Retain lines but allow manual repositioning.
+
+Export Features
+
+Export as PNG → capture the visible canvas (nodes and drawings).
+
+Export as PDF → using client-side libraries (like html2canvas and jsPDF).
+
+Extra Smart Touches (Optional but Powerful)
+
+AI Snap: when the user draws shapes (like circles or boxes), auto-smooth them.
+
+Quick Research Drop: when the user pastes a URL, auto-fetch its title and image preview.
+
+Highlight nodes that have the most attached evidence (for example, “Most Grounded Idea” badge).
+
+Stylus-ready handwriting mode for tablets.
+
+DESIGN STYLE
+
+Clean, minimal, and futuristic UI.
+
+Soft shadows, rounded corners (radius 2xl).
+
+Light color palette (white background with subtle pastels).
+
+Floating toolbar for quick actions (Add Node, Draw Mode, Export, etc.).
+
+Smooth transitions using Framer Motion if available.
+
+FILE STRUCTURE (suggested)
+index.html
+src/
+├── App.jsx
+├── components/
+│ ├── Canvas.jsx
+│ ├── Node.jsx
+│ ├── Toolbar.jsx
+│ └── EvidencePopup.jsx
+├── styles/
+│ └── app.css
+
+FINAL EXPECTATION
+
+The app should open directly in the browser (no backend or login needed).
+
+Users can instantly:
+
+Add and connect nodes.
+
+Draw freely on the canvas.
+
+Attach evidence files to each node.
+
+Export their current mind map and drawings as PDF or PNG.
+
+Focus on making it beautiful, fluid, and creative, something that feels like Miro and Notion.
