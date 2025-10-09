@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompt>
+  <task>
+    Create a single-page web application for calculating freelance project pricing with a modern, responsive, and visually appealing dark-themed user interface.
+  </task>
+  
+  <design_requirements>
+    <theme>Dark mode with purple-pink gradient backgrounds</theme>
+    <style>Glassmorphic cards with backdrop blur effects</style>
+    <layout>Two-column responsive grid (mobile-friendly single column)</layout>
+    <animations>Smooth transitions, hover effects, and fade-in animations</animations>
+    <icons>Use Lucide React icons for visual enhancement</icons>
+    <colors>
+      <primary>Purple and pink gradients</primary>
+      <accent>Purple-400, yellow-400, green-400, blue-400</accent>
+      <background>Slate-900 to purple-900 gradient</background>
+    </colors>
+  </design_requirements>
+
+  <features>
+    <section name="basic_calculation">
+      <title>Basic Calculation</title>
+      <icon>Clock</icon>
+      <inputs>
+        <input>
+          <label>Working Hours</label>
+          <type>number</type>
+          <min>0</min>
+          <step>0.5</step>
+          <default>40</default>
+        </input>
+        <input>
+          <label>Hourly Rate ($)</label>
+          <type>number</type>
+          <min>0</min>
+          <step>5</step>
+          <default>75</default>
+        </input>
+      </inputs>
+    </section>
+
+    <section name="project_factors">
+      <title>Project Factors</title>
+      <icon>Zap</icon>
+      <inputs>
+        <select>
+          <label>Complexity Level</label>
+          <options>
+            <option value="0">Easy (+0%)</option>
+            <option value="15">Medium (+15%)</option>
+            <option value="30">Hard (+30%)</option>
+            <option value="50">Very Hard (+50%)</option>
+          </options>
+          <default>0</default>
+        </select>
+        <select>
+          <label>Urgency Level</label>
+          <options>
+            <option value="0">Normal (+0%)</option>
+            <option value="20">Fast (+20%)</option>
+            <option value="40">Rush (+40%)</option>
+            <option value="60">Extremely Urgent (+60%)</option>
+          </options>
+          <default>0</default>
+        </select>
+      </inputs>
+    </section>
+
+    <section name="additional_costs">
+      <title>Additional Costs</title>
+      <icon>DollarSign</icon>
+      <inputs>
+        <input>
+          <label>Revision / Meeting / Communication Costs ($)</label>
+          <type>number</type>
+          <min>0</min>
+          <step>10</step>
+          <default>0</default>
+        </input>
+        <input>
+          <label>Operational Costs (Software, Utilities) ($)</label>
+          <type>number</type>
+          <min>0</min>
+          <step>10</step>
+          <default>0</default>
+        </input>
+      </inputs>
+    </section>
+
+    <section name="profit_adjustments">
+      <title>Profit &amp; Adjustments</title>
+      <icon>TrendingUp</icon>
+      <inputs>
+        <input>
+          <label>Profit Margin (%)</label>
+          <type>number</type>
+          <min>0</min>
+          <max>100</max>
+          <step>1</step>
+          <default>20</default>
+        </input>
+        <input>
+          <label>Discount (%)</label>
+          <type>number</type>
+          <min>0</min>
+          <max>100</max>
+          <step>1</step>
+          <default>0</default>
+        </input>
+        <input>
+          <label>Tax / Sales Tax (%)</label>
+          <type>number</type>
+          <min>0</min>
+          <max>100</max>
+          <step>0.5</step>
+          <default>0</default>
+        </input>
+      </inputs>
+    </section>
+
+    <section name="results">
+      <title>Results Display</title>
+      <components>
+        <component name="final_total_card">
+          <style>Large gradient card with purple-to-pink background</style>
+          <display>
+            <size>5xl to 6xl font size</size>
+            <format>USD currency with 2 decimals</format>
+            <animation>Pulse animation</animation>
+          </display>
+        </component>
+        <component name="breakdown_toggle">
+          <type>Button</type>
+          <action>Toggle cost breakdown visibility</action>
+        </component>
+        <component name="cost_breakdown">
+          <visibility>Conditional (toggle-based)</visibility>
+          <items>
+            <item show_if="always">Base Cost</item>
+            <item show_if="complexity > 0">Complexity Markup</item>
+            <item show_if="urgency > 0">Urgency Markup</item>
+            <item show_if="revisionCosts > 0">Revision/Meeting Costs</item>
+            <item show_if="operationalCosts > 0">Operational Costs</item>
+            <item show_if="always">Subtotal Before Profit</item>
+            <item show_if="always">Profit Margin</item>
+            <item show_if="always">Total Before Discount</item>
+            <item show_if="discount > 0">Discount</item>
+            <item show_if="always">Total After Discount</item>
+            <item show_if="tax > 0">Tax</item>
+            <item show_if="always" highlight="true">Final Total</item>
+          </items>
+        </component>
+      </components>
+    </section>
+
+    <actions>
+      <button name="reset">
+        <label>Reset All Fields</label>
+        <style>Red-themed button with hover scale effect</style>
+        <action>Reset all inputs to default values</action>
+      </button>
+    </actions>
+  </features>
+
+  <calculation_logic>
+    <formula>
+      <step order="1">
+        <name>Base Cost</name>
+        <calculation>Working Hours × Hourly Rate</calculation>
+      </step>
+      <step order="2">
+        <name>Complexity Markup</name>
+        <calculation>Base Cost × (Complexity % / 100)</calculation>
+      </step>
+      <step order="3">
+        <name>Urgency Markup</name>
+        <calculation>Base Cost × (Urgency % / 100)</calculation>
+      </step>
+      <step order="4">
+        <name>Subtotal Before Profit</name>
+        <calculation>Base Cost + Complexity Markup + Urgency Markup + Revision Costs + Operational Costs</calculation>
+      </step>
+      <step order="5">
+        <name>Profit Amount</name>
+        <calculation>Subtotal Before Profit × (Profit Margin % / 100)</calculation>
+      </step>
+      <step order="6">
+        <name>Total Before Discount</name>
+        <calculation>Subtotal Before Profit + Profit Amount</calculation>
+      </step>
+      <step order="7">
+        <name>Discount Amount</name>
+        <calculation>Total Before Discount × (Discount % / 100)</calculation>
+      </step>
+      <step order="8">
+        <name>Total After Discount</name>
+        <calculation>Total Before Discount - Discount Amount</calculation>
+      </step>
+      <step order="9">
+        <name>Tax Amount</name>
+        <calculation>Total After Discount × (Tax % / 100)</calculation>
+      </step>
+      <step order="10">
+        <name>Final Total</name>
+        <calculation>Total After Discount + Tax Amount</calculation>
+      </step>
+    </formula>
+  </calculation_logic>
+
+  <technical_requirements>
+    <framework>React with Hooks (useState)</framework>
+    <styling>Tailwind CSS utility classes</styling>
+    <icons>Lucide React</icons>
+    <responsiveness>Mobile-first responsive design</responsiveness>
+    <real_time_calculation>Update results immediately on input change</real_time_calculation>
+    <currency_format>US Dollar (USD) with proper formatting</currency_format>
+    <state_management>In-memory state using React hooks</state_management>
+  </technical_requirements>
+
+  <ui_behavior>
+    <interaction type="input_change">
+      <trigger>Any input field value changes</trigger>
+      <action>Recalculate all values in real-time</action>
+    </interaction>
+    <interaction type="reset_button">
+      <trigger>User clicks "Reset All Fields" button</trigger>
+      <action>Restore all inputs to default values</action>
+    </interaction>
+    <interaction type="breakdown_toggle">
+      <trigger>User clicks "Show/Hide Cost Breakdown" button</trigger>
+      <action>Toggle visibility of detailed cost breakdown section</action>
+    </interaction>
+    <interaction type="hover_effects">
+      <trigger>User hovers over cards or buttons</trigger>
+      <action>Apply subtle scaling or background color transitions</action>
+    </interaction>
+  </ui_behavior>
+
+  <accessibility>
+    <requirement>Proper label associations for all inputs</requirement>
+    <requirement>Focus states with visible outlines (ring effect)</requirement>
+    <requirement>Readable contrast ratios on dark background</requirement>
+    <requirement>Semantic HTML structure</requirement>
+  </accessibility>
+
+  <notes>
+    <note>All monetary values should be in USD currency</note>
+    <note>Tax field is customizable for US state/local sales tax rates</note>
+    <note>Breakdown items with zero values should be hidden for cleaner display</note>
+    <note>Use glassmorphic design with backdrop-blur for modern aesthetic</note>
+    <note>Include smooth animations and transitions for better UX</note>
+  </notes>
+</prompt>
