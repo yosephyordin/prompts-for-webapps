@@ -1,0 +1,13 @@
+Create a frontend-only login form using HTML, CSS, and vanilla JavaScript (no backend). The design must be highly futuristic with mechanical, cybernetic, and spatial animations—inspired by sci-fi interfaces, gears, energy flows, and kinetic motion.
+Requirements:
+* The form should appear as a floating 3D card or holographic panel with layered depth, using CSS 3D transforms or Three.js/WebGL for immersive effects.
+* On load, the form assembles itself with mechanical animation: gears turning, panels sliding in, wires connecting, or energy pulses activating—like a machine powering up.
+* Input fields (email/username and password) must have futuristic styling: glowing borders, animated placeholders that transform into labels, and subtle scan-line or particle hover effects.
+* The "Login" button should behave like a control console button: press-down animation, mechanical click sound (optional, via Web Audio API or CSS only), and a brief energy discharge or light ripple on click.
+* Use a dark theme with soft red, electric blue, or neon teal as accent colors—choose one that fits a high-tech aesthetic.
+* Add ambient background: subtle animated grid, floating particles, or rotating mechanical schematics (using Three.js or lightweight canvas animation).
+* Fully responsive for mobile and desktop.
+* No external frameworks (React, Vue, etc.), only vanilla JS and CDN-hosted libraries if needed (e.g., Three.js via CDN).
+* All code must be split into clean, commented HTML, CSS, and JS files.
+* Prioritize visual storytelling and immersive interaction—this is a demo piece meant to evoke a "4D spatial" experience, not just a functional form.
+Bonus: Include a subtle parallax effect when moving the mouse, making the UI feel like it exists in physical space.
